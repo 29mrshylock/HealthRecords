@@ -1,0 +1,274 @@
+/* Root Variables */
+:root {
+    --primary-blue: #4A90E2; /* Vibrant Blue */
+    --secondary-green: #50C878; /* Fresh Green */
+    --accent-coral: #FF6F61; /* Coral */
+    --neutral-gray: #F7F9FC; /* Light Gray */
+    --highlight-gold: #FFD700; /* Gold */
+    --text-dark: #2D3748; /* Dark Gray */
+    --bg-white: #FFFFFF; /* White */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --glow: 0 0 8px rgba(74, 144, 226, 0.5);
+    --transition: all 0.3s ease;
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 16px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+}
+
+/* ========== Header Styles ========== */
+.digital-health-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-green));
+    padding: var(--spacing-sm) 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.digital-health-header .navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--bg-white) !important;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.digital-health-header .navbar-brand:hover {
+    transform: scale(1.02);
+    color: var(--highlight-gold) !important;
+}
+
+.digital-health-header .navbar-brand i {
+    font-size: 1.5rem;
+    margin-right: var(--spacing-xs);
+    color: var(--bg-white);
+}
+
+.digital-health-header .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 0 var(--spacing-sm);
+    position: relative;
+    padding: var(--spacing-xs) 0 !important;
+    transition: var(--transition);
+}
+
+.digital-health-header .nav-link:hover,
+.digital-health-header .nav-link.active {
+    color: var(--bg-white) !important;
+}
+
+.digital-health-header .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--highlight-gold);
+    bottom: 0;
+    left: 0;
+    transition: width var(--transition);
+    border-radius: 3px;
+}
+
+.digital-health-header .nav-link:hover::after,
+.digital-health-header .nav-link.active::after {
+    width: 100%;
+}
+
+.digital-health-header .btn-outline-light {
+    border: 2px solid var(--bg-white);
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 8px;
+    color: var(--bg-white);
+    transition: var(--transition);
+}
+
+.digital-health-header .btn-outline-light:hover {
+    background: var(--accent-coral);
+    border-color: var(--accent-coral);
+    color: var(--bg-white);
+    transform: translateY(-2px);
+}
+
+/* ========== Footer Styles ========== */
+.digital-health-footer {
+    background: var(--text-dark);
+    color: var(--bg-white);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.digital-health-footer::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.digital-health-footer h5 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+    color: var(--bg-white);
+}
+
+.digital-health-footer h5::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-blue);
+    bottom: -10px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.digital-health-footer p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.digital-health-footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.digital-health-footer a:hover {
+    color: var(--highlight-gold);
+    transform: translateX(5px);
+}
+
+.digital-health-footer .list-unstyled li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-white);
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary-blue);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-divider {
+    background: rgba(255, 255, 255, 0.1);
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+    height: 1px;
+    border: none;
+}
+
+.digital-health-footer .small {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.digital-health-footer .small a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.digital-health-footer .small a:hover {
+    color: var(--highlight-gold);
+    text-decoration: underline;
+}
+
+/* Contact Info Icons */
+.digital-health-footer .fa-map-marker-alt,
+.digital-health-footer .fa-phone,
+.digital-health-footer .fa-envelope {
+    width: 20px;
+    text-align: center;
+    margin-right: var(--spacing-xs);
+    color: var(--secondary-green);
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 992px) {
+    .digital-health-header .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .digital-health-footer {
+        padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+
+    .digital-health-footer .col-lg-4,
+    .digital-health-footer .col-lg-2 {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .digital-health-header .navbar-collapse {
+        padding-top: var(--spacing-sm);
+    }
+
+    .digital-health-header .nav-item {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .digital-health-header .btn-outline-light {
+        margin-top: var(--spacing-xs);
+    }
+
+    .digital-health-footer h5 {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .digital-health-footer h5::after {
+        bottom: -8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .digital-health-footer .row > div {
+        text-align: center;
+    }
+
+    .digital-health-footer h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .digital-health-footer .text-md-start,
+    .digital-health-footer .text-md-end {
+        text-align: center !important;
+    }
+}
